@@ -1,0 +1,814 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/fabio/ontologies/2025/1/untitled-ontology-15"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/fabio/ontologies/2025/1/untitled-ontology-15">
+    <Prefix name="" IRI="http://www.semanticweb.org/fabio/ontologies/2025/1/untitled-ontology-15/"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="#Autor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Categoria"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Conto"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Cronica"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Drama"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Editora"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Ensaio"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Livro"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MeioPublicacao"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Poesia"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Romance"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#impresso"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#livroDigital"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#livroFisico"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#virtual"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#book"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#ehAutorDe"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#ehBookDe"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#ehCategoriaDe"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#ehEditoraDe"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#ehMeiopublicacaoDe"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#possuiMeio"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#temAutor"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#temCategoria"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#temEditora"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#temMeiopublicacao"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#anoPublicacaoLiv"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#descricaoCategoria"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#dimensoesFisi"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#formatoDigi"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#identificadorAutor"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#identificadorCategoria"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#identificadorEditora"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#isbnLiv"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#nacionalidadeAutor"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#nomeCategoria"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#nomeCompletoAutor"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#nomeEditora"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#numeroPaginasLiv"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#numeroPrateleiraFisi"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#paisOrigemEditora"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#pesoFisi"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#tamanhoArquivoDigi"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#tituloLiv"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#urlDigi"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CapitaesDeAreia"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#JorgeAmado"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#MachadoDeAssis"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#aventura"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#cientifico"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ficcao"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#infantil"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ipsilon"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#jornalistica"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#livroCapitaesDeAreia"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#moderna"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#tragedia"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="#livroDigital"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Livro"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#possuiMeio"/>
+                <Class IRI="#virtual"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#temAutor"/>
+                <Class IRI="#Autor"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#livroFisico"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Livro"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#possuiMeio"/>
+                <Class IRI="#impresso"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#temAutor"/>
+                <Class IRI="#Autor"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="#Conto"/>
+        <Class IRI="#Categoria"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Cronica"/>
+        <Class IRI="#Categoria"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Drama"/>
+        <Class IRI="#Categoria"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Ensaio"/>
+        <Class IRI="#Categoria"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Livro"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="#temAutor"/>
+            <Class IRI="#Autor"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Livro"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="#temCategoria"/>
+            <Class IRI="#Categoria"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Livro"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#temEditora"/>
+            <Class IRI="#Editora"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Livro"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#temMeiopublicacao"/>
+            <Class IRI="#MeioPublicacao"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Poesia"/>
+        <Class IRI="#Categoria"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Romance"/>
+        <Class IRI="#Categoria"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#impresso"/>
+        <Class IRI="#MeioPublicacao"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#livroDigital"/>
+        <Class IRI="#Livro"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal>PDF</Literal>
+        </Annotation>
+        <Class IRI="#livroDigital"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#formatoDigi"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#livroFisico"/>
+        <Class IRI="#Livro"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#livroFisico"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#pesoFisi"/>
+            <Datatype abbreviatedIRI="xsd:float"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#virtual"/>
+        <Class IRI="#MeioPublicacao"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="#impresso"/>
+        <Class IRI="#virtual"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <Class IRI="#livroFisico"/>
+        <NamedIndividual IRI="#CapitaesDeAreia"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Autor"/>
+        <NamedIndividual IRI="#JorgeAmado"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Autor"/>
+        <NamedIndividual IRI="#MachadoDeAssis"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Romance"/>
+        <NamedIndividual IRI="#aventura"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Ensaio"/>
+        <NamedIndividual IRI="#cientifico"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Romance"/>
+        <NamedIndividual IRI="#ficcao"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Conto"/>
+        <NamedIndividual IRI="#infantil"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Editora"/>
+        <NamedIndividual IRI="#ipsilon"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Cronica"/>
+        <NamedIndividual IRI="#jornalistica"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#livroDigital"/>
+        <NamedIndividual IRI="#livroCapitaesDeAreia"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Poesia"/>
+        <NamedIndividual IRI="#moderna"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Drama"/>
+        <NamedIndividual IRI="#tragedia"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#temAutor"/>
+        <NamedIndividual IRI="#CapitaesDeAreia"/>
+        <NamedIndividual IRI="#JorgeAmado"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#temCategoria"/>
+        <NamedIndividual IRI="#ficcao"/>
+        <NamedIndividual IRI="#CapitaesDeAreia"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#temEditora"/>
+        <NamedIndividual IRI="#ipsilon"/>
+        <NamedIndividual IRI="#CapitaesDeAreia"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#anoPublicacaoLiv"/>
+        <NamedIndividual IRI="#CapitaesDeAreia"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">1937</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#numeroPaginasLiv"/>
+        <NamedIndividual IRI="#CapitaesDeAreia"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">288</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#tituloLiv"/>
+        <NamedIndividual IRI="#CapitaesDeAreia"/>
+        <Literal>Capitaes de Areia</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nacionalidadeAutor"/>
+        <NamedIndividual IRI="#JorgeAmado"/>
+        <Literal>Brasileiro</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nomeCompletoAutor"/>
+        <NamedIndividual IRI="#JorgeAmado"/>
+        <Literal>Jorge Amado</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nacionalidadeAutor"/>
+        <NamedIndividual IRI="#MachadoDeAssis"/>
+        <Literal>Brasileiro</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nomeCompletoAutor"/>
+        <NamedIndividual IRI="#MachadoDeAssis"/>
+        <Literal>MachadoDeAssis</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#descricaoCategoria"/>
+        <NamedIndividual IRI="#ficcao"/>
+        <Literal>Literatura de ficcao</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#identificadorCategoria"/>
+        <NamedIndividual IRI="#ficcao"/>
+        <Literal>FIC001</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nomeCategoria"/>
+        <NamedIndividual IRI="#ficcao"/>
+        <Literal>Ficcao</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#identificadorEditora"/>
+        <NamedIndividual IRI="#ipsilon"/>
+        <Literal>IP001</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nomeEditora"/>
+        <NamedIndividual IRI="#ipsilon"/>
+        <Literal>Ipsilon</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#paisOrigemEditora"/>
+        <NamedIndividual IRI="#ipsilon"/>
+        <Literal>Brasil</Literal>
+    </DataPropertyAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#book"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#ehAutorDe"/>
+        <ObjectProperty IRI="#ehBookDe"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#ehBookDe"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#ehCategoriaDe"/>
+        <ObjectProperty IRI="#ehBookDe"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#ehEditoraDe"/>
+        <ObjectProperty IRI="#ehBookDe"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#ehMeiopublicacaoDe"/>
+        <ObjectProperty IRI="#ehBookDe"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#temAutor"/>
+        <ObjectProperty IRI="#book"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#temCategoria"/>
+        <ObjectProperty IRI="#book"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#temEditora"/>
+        <ObjectProperty IRI="#book"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#temMeiopublicacao"/>
+        <ObjectProperty IRI="#book"/>
+    </SubObjectPropertyOf>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#book"/>
+        <ObjectProperty IRI="#ehBookDe"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#ehAutorDe"/>
+        <ObjectProperty IRI="#temAutor"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#ehCategoriaDe"/>
+        <ObjectProperty IRI="#temCategoria"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#ehEditoraDe"/>
+        <ObjectProperty IRI="#temEditora"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#ehMeiopublicacaoDe"/>
+        <ObjectProperty IRI="#temMeiopublicacao"/>
+    </InverseObjectProperties>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#temEditora"/>
+    </FunctionalObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#temAutor"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#temCategoria"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#temEditora"/>
+    </AsymmetricObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#book"/>
+        <Class IRI="#Livro"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#possuiMeio"/>
+        <Class IRI="#Livro"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#temAutor"/>
+        <Class IRI="#Livro"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#temCategoria"/>
+        <Class IRI="#Livro"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#temEditora"/>
+        <Class IRI="#Livro"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#temMeiopublicacao"/>
+        <Class IRI="#Livro"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#possuiMeio"/>
+        <Class IRI="#MeioPublicacao"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#temAutor"/>
+        <Class IRI="#Autor"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#temCategoria"/>
+        <Class IRI="#Categoria"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#temEditora"/>
+        <Class IRI="#Editora"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#temMeiopublicacao"/>
+        <Class IRI="#MeioPublicacao"/>
+    </ObjectPropertyRange>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#anoPublicacaoLiv"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#descricaoCategoria"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#dimensoesFisi"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#formatoDigi"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#identificadorAutor"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#identificadorCategoria"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#identificadorEditora"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#isbnLiv"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#nacionalidadeAutor"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#nomeCategoria"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#nomeCompletoAutor"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#nomeEditora"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#numeroPaginasLiv"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#numeroPrateleiraFisi"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#paisOrigemEditora"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#pesoFisi"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#tamanhoArquivoDigi"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#tituloLiv"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#urlDigi"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#identificadorAutor"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#identificadorCategoria"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#identificadorEditora"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#isbnLiv"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#nomeCategoria"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#tituloLiv"/>
+    </FunctionalDataProperty>
+    <DataPropertyDomain>
+        <DataProperty IRI="#anoPublicacaoLiv"/>
+        <Class IRI="#Livro"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#descricaoCategoria"/>
+        <Class IRI="#Categoria"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#dimensoesFisi"/>
+        <Class IRI="#livroFisico"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#formatoDigi"/>
+        <Class IRI="#livroDigital"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#identificadorAutor"/>
+        <Class IRI="#Autor"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#identificadorCategoria"/>
+        <Class IRI="#Categoria"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#identificadorEditora"/>
+        <Class IRI="#Editora"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#isbnLiv"/>
+        <Class IRI="#Livro"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#nacionalidadeAutor"/>
+        <Class IRI="#Autor"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#nomeCategoria"/>
+        <Class IRI="#Categoria"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#nomeCompletoAutor"/>
+        <Class IRI="#Autor"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#nomeEditora"/>
+        <Class IRI="#Editora"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#numeroPaginasLiv"/>
+        <Class IRI="#Livro"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#numeroPrateleiraFisi"/>
+        <Class IRI="#livroFisico"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#paisOrigemEditora"/>
+        <Class IRI="#Editora"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#pesoFisi"/>
+        <Class IRI="#livroFisico"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#tamanhoArquivoDigi"/>
+        <Class IRI="#livroDigital"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#tituloLiv"/>
+        <Class IRI="#Livro"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#urlDigi"/>
+        <Class IRI="#livroDigital"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#anoPublicacaoLiv"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#descricaoCategoria"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#dimensoesFisi"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#formatoDigi"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#identificadorAutor"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#identificadorCategoria"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#identificadorEditora"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#isbnLiv"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#nacionalidadeAutor"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#nomeCategoria"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#nomeCompletoAutor"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#nomeEditora"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#numeroPaginasLiv"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#numeroPrateleiraFisi"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#paisOrigemEditora"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#pesoFisi"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#tamanhoArquivoDigi"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#tituloLiv"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#urlDigi"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#temAutor</IRI>
+        <Literal>Relação entre Livro e seus Autores</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#temCategoria</IRI>
+        <Literal>Relação entre Livro e suas Categorias</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#temEditora</IRI>
+        <Literal>Relação entre Livro e sua Editora</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
